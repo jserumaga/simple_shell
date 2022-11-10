@@ -10,9 +10,21 @@
 #include <unistd.h>
 #include <string.h>
 
-size_t print_listint(const listint_t *h);
-nclude <stdio.h>
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ */
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+} listint_t;
 
+size_t print_listint(const listint_t *h);
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
@@ -110,10 +122,8 @@ typedef struct passinfo
 } info_t;
 
 #define INFO_INIT \
-
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-
-		0, 0, 0}
+	0, 0, 0}
 
 
 /**

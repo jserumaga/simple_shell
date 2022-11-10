@@ -4,16 +4,27 @@
  * _erratoi - converts a string to an integer
  * @s: the string to be converted
  * Return: 0 if no numbers in string, converted number otherwise
+<<<<<<< HEAD
  *       -1 on error
  */
 
+=======
+ * -1 on error
+ */
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 int _erratoi(char *s)
 {
 	int i = 0;
 	unsigned long int result = 0;
+<<<<<<< HEAD
 	
 	if (*s == '+')
 		s++;  /* TODO: why does this make main return 255? */
+=======
+
+	if (*s == '+')
+		s++;  /* QUE: why does this make main return 255? */
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 	for (i = 0;  s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
@@ -34,9 +45,14 @@ int _erratoi(char *s)
  * @info: the parameter & return info struct
  * @estr: string containing specified error type
  * Return: 0 if no numbers in string, converted number otherwise
+<<<<<<< HEAD
  *        -1 on error
  */
 
+=======
+ * -1 on error
+ */
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 void print_error(info_t *info, char *estr)
 {
 	_eputs(info->fname);
@@ -52,15 +68,25 @@ void print_error(info_t *info, char *estr)
  * print_d - function prints a decimal (integer) number (base 10)
  * @input: the input
  * @fd: the filedescriptor to write to
+<<<<<<< HEAD
  * Return: number of characters printed
  */
 
+=======
+ *
+ * Return: number of characters printed
+ */
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 int print_d(int input, int fd)
 {
 	int (*__putchar)(char) = _putchar;
 	int i, count = 0;
 	unsigned int _abs_, current;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 	if (fd == STDERR_FILENO)
 		__putchar = _eputchar;
 	if (input < 0)
@@ -83,6 +109,10 @@ int print_d(int input, int fd)
 	}
 	__putchar('0' + current);
 	count++;
+<<<<<<< HEAD
+=======
+
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 	return (count);
 }
 
@@ -91,9 +121,15 @@ int print_d(int input, int fd)
  * @num: number
  * @base: base
  * @flags: argument flags
+<<<<<<< HEAD
  * Return: string
  */
 
+=======
+ *
+ * Return: string
+ */
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 char *convert_number(long int num, int base, int flags)
 {
 	static char *array;
@@ -101,7 +137,11 @@ char *convert_number(long int num, int base, int flags)
 	char sign = 0;
 	char *ptr;
 	unsigned long n = num;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
 		n = -num;
@@ -110,11 +150,20 @@ char *convert_number(long int num, int base, int flags)
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
+<<<<<<< HEAD
 	do
 	{
 		*--ptr = array[n % base];
 		n /= base;
 	} while (n != 0);
+=======
+
+	do	{
+		*--ptr = array[n % base];
+		n /= base;
+	} while (n != 0);
+
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 	if (sign)
 		*--ptr = sign;
 	return (ptr);
@@ -123,6 +172,7 @@ char *convert_number(long int num, int base, int flags)
 /**
  * remove_comments - function replaces first instance of '#' with '\0'
  * @buf: address of the string to modify
+<<<<<<< HEAD
  * Return: Always 0;
  */
 
@@ -130,6 +180,15 @@ void remove_comments(char *buf)
 {
 	int i;
 	
+=======
+ *
+ * Return: Always 0;
+ */
+void remove_comments(char *buf)
+{
+	int i;
+
+>>>>>>> de3b4969a691bb48f4bb874ab16a8c4da52c3e04
 	for (i = 0; buf[i] != '\0'; i++)
 		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
 		{
