@@ -1,4 +1,4 @@
-lude "shell.h"
+#include "shell.h"
 
 /**
  * _strncpy - copies a string
@@ -12,8 +12,8 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i, j;
 	char *s = dest;
+
 	i = 0;
-	
 	while (src[i] != '\0' && i < n - 1)
 	{
 		dest[i] = src[i];
@@ -43,9 +43,10 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 	char *s = dest;
+
 	i = 0;
 	j = 0;
-	
+
 	while (dest[i] != '\0')
 		i++;
 	while (src[j] != '\0' && j < n)
@@ -68,11 +69,9 @@ char *_strncat(char *dest, char *src, int n)
 
 char *_strchr(char *s, char c)
 {
-	do
-	{
+	do {
 		if (*s == c)
 			return (s);
-	}
-	while (*s++ != '\0');
+	} while (*s++ != '\0');
 	return (NULL);
 }
