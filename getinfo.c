@@ -22,9 +22,9 @@ void clear_info(info_t *info)
 void set_info(info_t *info, char **av)
 {
 	int i = 0;
-	
+
 	info->fname = av[0];
-	
+
 	if (info->arg)
 	{
 		info->argv = strtow(info->arg, " \t");
@@ -55,7 +55,7 @@ void free_info(info_t *info, int all)
 	ffree(info->argv);
 	info->argv = NULL;
 	info->path = NULL;
-	
+
 	if (all)
 	{
 		if (!info->cmd_buf)
