@@ -11,10 +11,6 @@ char *get_history_file(info_t *info)
 	char *buf, *dir;
 
 	dir = _getenv(info, "HOME=");
-<<<<<<< HEAD
-
-=======
->>>>>>> e44021b55deedcb896ad4dc2735a522be614053f
 	if (!dir)
 		return (NULL);
 	buf = malloc(sizeof(char) * (_strlen(dir) + _strlen(HIST_FILE) + 2));

@@ -33,12 +33,7 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 			}
 			info->linecount_flag = 1;
 			remove_comments(*buf);
-<<<<<<< HEAD
-			build_history_list(info,
-					*buf, info->histcount++);
-=======
 			build_history_list(info, *buf, info->histcount++);
->>>>>>> e44021b55deedcb896ad4dc2735a522be614053f
 			/* if (_strchr(*buf, ';')) is this a command chain? */
 			{
 				*len = r;
@@ -129,10 +124,6 @@ int _getline(info_t *info, char **ptr, size_t *length)
 	char *p = NULL, *new_p = NULL, *c;
 
 	p = *ptr;
-<<<<<<< HEAD
-
-=======
->>>>>>> e44021b55deedcb896ad4dc2735a522be614053f
 	if (p && length)
 		s = *length;
 	if (i == len)
