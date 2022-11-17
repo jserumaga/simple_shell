@@ -1,4 +1,5 @@
 This is a REDME file for the group project 0x16. C - Simple Shell
+Team Project on C Simple Shell - Julius Pyton Sserumaga and Deborah Oduronbi.
 The objective of the project is to Write a simple UNIX command interpreter.
 At the end of the project one nees to understand the following:
 1. Who designed and implemented the original Unix operating system
